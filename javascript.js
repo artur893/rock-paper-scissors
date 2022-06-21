@@ -7,29 +7,54 @@ resultContainer.textContent = playerScore + " : " + computerScore
 const rockButton = document.querySelector("#rock")
 const paperButton = document.querySelector("#paper")
 const scissorsButton = document.querySelector("#scissors")
+const newgameButton = document.querySelector(".newgame")
 
-rockButton.addEventListener("click",() => {
+newgameButton.addEventListener("click", () => {
+    playerScore = 0
+    computerScore = 0
+    resultContainer.textContent = playerScore + " : " + computerScore
+})
+
+rockButton.addEventListener("click", () => {
     playerSelection = "rock"
     computerSelection = computerPlay()
     console.log("Player plays:", playerSelection)
     playRound(playerSelection, computerSelection)
     resultContainer.textContent = playerScore + " : " + computerScore
+    if (playerScore === 5) {
+        alert("You WIN!")
+    }
+    if (computerScore === 5) {
+        alert("You LOSE!")
+    }
 })
 
-paperButton.addEventListener("click",() => {
+paperButton.addEventListener("click", () => {
     playerSelection = "paper"
     computerSelection = computerPlay()
     console.log("Player plays:", playerSelection)
     playRound(playerSelection, computerSelection)
     resultContainer.textContent = playerScore + " : " + computerScore
+    if (playerScore === 5) {
+        alert("You WIN!")
+    }
+    if (computerScore === 5) {
+        alert("You LOSE!")
+    }
 })
 
-scissorsButton.addEventListener("click",() => {
+scissorsButton.addEventListener("click", () => {
     playerSelection = "scissors"
     computerSelection = computerPlay()
     console.log("Player plays:", playerSelection)
     playRound(playerSelection, computerSelection)
     resultContainer.textContent = playerScore + " : " + computerScore
+    if (playerScore === 5) {
+        alert("You WIN!")
+    }
+    if (computerScore === 5) {
+        alert("You LOSE!")
+    }
 })
 
 
@@ -37,17 +62,17 @@ scissorsButton.addEventListener("click",() => {
 
 
 
-function computerPlay () {
+function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3)
-    switch(randomNumber) {
+    switch (randomNumber) {
         case 0:
-            console.log ("Computer plays: rock!")
+            console.log("Computer plays: rock!")
             return "rock"
         case 1:
-            console.log ("Computer plays: paper!")
+            console.log("Computer plays: paper!")
             return "paper"
         case 2:
-            console.log ("Computer plays: scissors!")
+            console.log("Computer plays: scissors!")
             return "scissors"
     }
 }
@@ -73,7 +98,7 @@ function playRound(playerSelection, computerSelection) {
         computerScore++
         console.log("Player: " + playerScore + " " + "Computer: " + computerScore)
         return "Computer wins"
-       }
+    }
 }
 
 
@@ -85,10 +110,12 @@ function playGame() {
         console.log("Game result: DRAW")
     }
     if (playerScore > computerScore) {
-        console.log ("Congrats! You beated up the computer! YOU WON!")
+        console.log("Congrats! You beated up the computer! YOU WON!")
     }
     if (playerScore < computerScore) {
-        console.log ("This time you lose :( Computer won!")
+        console.log("This time you lose :( Computer won!")
     }
 }
+
+
 

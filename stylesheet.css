@@ -1,17 +1,34 @@
 body {
     background-color: rgb(41, 41, 41);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     background-color: midnightblue;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     width: 800px;
     height: 600px;
     margin: auto;
     border: solid;
     margin-top: 100px;
+    margin-bottom: 0;
+}
 
+.newgame {
+    height: 50px;
+    width: 200px;
+    background-color: midnightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    border: solid;
+    margin-top: 20px;
 }
 
 .top {
