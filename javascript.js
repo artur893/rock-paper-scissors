@@ -1,6 +1,42 @@
 let playerScore = 0
 let computerScore = 0
 
+const resultContainer = document.querySelector(".result")
+resultContainer.textContent = playerScore + " : " + computerScore
+
+const rockButton = document.querySelector("#rock")
+const paperButton = document.querySelector("#paper")
+const scissorsButton = document.querySelector("#scissors")
+
+rockButton.addEventListener("click",() => {
+    playerSelection = "rock"
+    computerSelection = computerPlay()
+    console.log("Player plays:", playerSelection)
+    playRound(playerSelection, computerSelection)
+    resultContainer.textContent = playerScore + " : " + computerScore
+})
+
+paperButton.addEventListener("click",() => {
+    playerSelection = "paper"
+    computerSelection = computerPlay()
+    console.log("Player plays:", playerSelection)
+    playRound(playerSelection, computerSelection)
+    resultContainer.textContent = playerScore + " : " + computerScore
+})
+
+scissorsButton.addEventListener("click",() => {
+    playerSelection = "scissors"
+    computerSelection = computerPlay()
+    console.log("Player plays:", playerSelection)
+    playRound(playerSelection, computerSelection)
+    resultContainer.textContent = playerScore + " : " + computerScore
+})
+
+
+
+
+
+
 function computerPlay () {
     let randomNumber = Math.floor(Math.random() * 3)
     switch(randomNumber) {
@@ -17,8 +53,6 @@ function computerPlay () {
 }
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Choose one: rock, paper or scissors?")
-    computerSelection = computerPlay()
     if (playerSelection === computerSelection) {
         console.log("Draw!")
         console.log("Player: " + playerScore + " " + "Computer: " + computerScore)
@@ -58,4 +92,3 @@ function playGame() {
     }
 }
 
-playGame()
