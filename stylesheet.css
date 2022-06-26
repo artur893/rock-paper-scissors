@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(41, 41, 41);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(219,220,255);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,67 +8,76 @@ body {
 }
 
 .container {
-    background-color: midnightblue;
+    background-color: rgb(238,203,255);
     display: flex;
     flex-direction: column;
     width: 800px;
     height: 600px;
     margin: auto;
     border: solid;
+    border-radius: 20px;
     margin-top: 100px;
     margin-bottom: 0;
 }
 
 .newgame {
+    font-size: 24px;
     height: 50px;
     width: 200px;
-    background-color: midnightblue;
+    background-color: rgb(254,255,163);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: auto;
     border: solid;
+    border-radius: 20px;
     margin-top: 20px;
 }
 
-.top {
-    border: solid;
-    height: 300px;
-}
-
 .toptop {
-    border: solid;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.middle {
+    font-size: 80px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .bottom {
     height: 300px;
-    border: solid;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .result {
-    background-color: lightsalmon;
+    background-color: rgb(212,255,234);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     height: 60px;
     width: 300px;
     justify-content: center;
     align-items: center;
+    border: solid;
+    border-radius: 20px;
 }
 
 #rock,
 #paper,
 #scissors {
-    background-color: lightsalmon;
-    width: 100px;
-    height: 100px;
+    background-color: rgb(254,255,163);
+    width: 110px;
+    height: 110px;
     border: solid;
+    border-radius: 20px;
     margin: 0;
     display: flex;
     justify-content: center;

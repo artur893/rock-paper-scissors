@@ -22,10 +22,12 @@ rockButton.addEventListener("click", () => {
     playRound(playerSelection, computerSelection)
     resultContainer.textContent = playerScore + " : " + computerScore
     if (playerScore === 5) {
-        alert("You WIN!")
+        const gameResult = document.querySelector(".middle")
+        gameResult.textContent = ("YOU WIN!")
     }
     if (computerScore === 5) {
-        alert("You LOSE!")
+        const gameResult = document.querySelector(".middle")
+        gameResult.textContent = ("YOU LOSE!")
     }
 })
 
@@ -36,10 +38,12 @@ paperButton.addEventListener("click", () => {
     playRound(playerSelection, computerSelection)
     resultContainer.textContent = playerScore + " : " + computerScore
     if (playerScore === 5) {
-        alert("You WIN!")
+        const gameResult = document.querySelector(".middle")
+        gameResult.textContent = ("YOU LOSE!")
     }
     if (computerScore === 5) {
-        alert("You LOSE!")
+        const gameResult = document.querySelector(".middle")
+        gameResult.textContent = ("YOU LOSE!")
     }
 })
 
@@ -50,17 +54,14 @@ scissorsButton.addEventListener("click", () => {
     playRound(playerSelection, computerSelection)
     resultContainer.textContent = playerScore + " : " + computerScore
     if (playerScore === 5) {
-        alert("You WIN!")
+        const gameResult = document.querySelector(".middle")
+        gameResult.textContent = ("YOU LOSE!")
     }
     if (computerScore === 5) {
-        alert("You LOSE!")
+        const gameResult = document.querySelector(".middle")
+        gameResult.textContent = ("YOU LOSE!")
     }
 })
-
-
-
-
-
 
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3)
