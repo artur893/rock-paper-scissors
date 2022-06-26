@@ -71,9 +71,9 @@ body {
     border-radius: 20px;
 }
 
-#rock,
-#paper,
-#scissors {
+.rock,
+.paper,
+.scissors {
     background-color: rgb(254, 255, 163);
     width: 110px;
     height: 110px;
@@ -87,14 +87,23 @@ body {
 
 }
 
-#rock {
+.rock {
     margin-left: 150px;
 }
 
-#scissors {
+.scissors {
     margin-right: 150px;
 }
 
 .picked {
+    transform: scale(1.1);
+}
+
+.deactivate {
+    background-color: rgb(255, 0, 102);
+    transform: scale(0.9);
+}
+
+.bigger {
     transform: scale(1.1);
 }

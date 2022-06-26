@@ -4,62 +4,97 @@ let computerScore = 0
 const resultContainer = document.querySelector(".result")
 resultContainer.textContent = playerScore + " : " + computerScore
 
-const rockButton = document.querySelector("#rock")
-const paperButton = document.querySelector("#paper")
-const scissorsButton = document.querySelector("#scissors")
+const rockButton = document.querySelector(".rock")
+const paperButton = document.querySelector(".paper")
+const scissorsButton = document.querySelector(".scissors")
 const newgameButton = document.querySelector(".newgame")
 
 newgameButton.addEventListener("click", () => {
     playerScore = 0
     computerScore = 0
     resultContainer.textContent = playerScore + " : " + computerScore
+    rockButton.classList.remove("deactivate")
+    paperButton.classList.remove("deactivate")
+    scissorsButton.classList.remove("deactivate")
+    newgameButton.classList.remove("bigger")
 })
 
 rockButton.addEventListener("click", () => {
-    playerSelection = "rock"
-    computerSelection = computerPlay()
-    console.log("Player plays:", playerSelection)
-    playRound(playerSelection, computerSelection)
-    resultContainer.textContent = playerScore + " : " + computerScore
-    if (playerScore === 5) {
-        const gameResult = document.querySelector(".middle")
-        gameResult.textContent = ("YOU WIN!")
-    }
-    if (computerScore === 5) {
-        const gameResult = document.querySelector(".middle")
-        gameResult.textContent = ("YOU LOSE!")
+    if (playerScore < 5 && computerScore < 5) {
+        playerSelection = "rock"
+        computerSelection = computerPlay()
+        console.log("Player plays:", playerSelection)
+        playRound(playerSelection, computerSelection)
+        resultContainer.textContent = playerScore + " : " + computerScore
+        if (playerScore === 5) {
+            const gameResult = document.querySelector(".middle")
+            gameResult.textContent = ("YOU WIN!")
+            rockButton.classList.add("deactivate")
+            paperButton.classList.add("deactivate")
+            scissorsButton.classList.add("deactivate")
+            newgameButton.classList.add("bigger")
+        }
+        if (computerScore === 5) {
+            const gameResult = document.querySelector(".middle")
+            gameResult.textContent = ("YOU LOSE!")
+            rockButton.classList.add("deactivate")
+            paperButton.classList.add("deactivate")
+            scissorsButton.classList.add("deactivate")
+            newgameButton.classList.add("bigger")
+        }
     }
 })
 
+
 paperButton.addEventListener("click", () => {
-    playerSelection = "paper"
-    computerSelection = computerPlay()
-    console.log("Player plays:", playerSelection)
-    playRound(playerSelection, computerSelection)
-    resultContainer.textContent = playerScore + " : " + computerScore
-    if (playerScore === 5) {
-        const gameResult = document.querySelector(".middle")
-        gameResult.textContent = ("YOU LOSE!")
-    }
-    if (computerScore === 5) {
-        const gameResult = document.querySelector(".middle")
-        gameResult.textContent = ("YOU LOSE!")
+    if (playerScore < 5 && computerScore < 5) {
+        playerSelection = "paper"
+        computerSelection = computerPlay()
+        console.log("Player plays:", playerSelection)
+        playRound(playerSelection, computerSelection)
+        resultContainer.textContent = playerScore + " : " + computerScore
+        if (playerScore === 5) {
+            const gameResult = document.querySelector(".middle")
+            gameResult.textContent = ("YOU LOSE!")
+            rockButton.classList.add("deactivate")
+            paperButton.classList.add("deactivate")
+            scissorsButton.classList.add("deactivate")
+            newgameButton.classList.add("bigger")
+        }
+        if (computerScore === 5) {
+            const gameResult = document.querySelector(".middle")
+            gameResult.textContent = ("YOU LOSE!")
+            rockButton.classList.add("deactivate")
+            paperButton.classList.add("deactivate")
+            scissorsButton.classList.add("deactivate")
+            newgameButton.classList.add("bigger")
+        }
     }
 })
 
 scissorsButton.addEventListener("click", () => {
-    playerSelection = "scissors"
-    computerSelection = computerPlay()
-    console.log("Player plays:", playerSelection)
-    playRound(playerSelection, computerSelection)
-    resultContainer.textContent = playerScore + " : " + computerScore
-    if (playerScore === 5) {
-        const gameResult = document.querySelector(".middle")
-        gameResult.textContent = ("YOU LOSE!")
-    }
-    if (computerScore === 5) {
-        const gameResult = document.querySelector(".middle")
-        gameResult.textContent = ("YOU LOSE!")
+    if (playerScore < 5 && computerScore < 5) {
+        playerSelection = "scissors"
+        computerSelection = computerPlay()
+        console.log("Player plays:", playerSelection)
+        playRound(playerSelection, computerSelection)
+        resultContainer.textContent = playerScore + " : " + computerScore
+        if (playerScore === 5) {
+            const gameResult = document.querySelector(".middle")
+            gameResult.textContent = ("YOU LOSE!")
+            rockButton.classList.add("deactivate")
+            paperButton.classList.add("deactivate")
+            scissorsButton.classList.add("deactivate")
+            newgameButton.classList.add("bigger")
+        }
+        if (computerScore === 5) {
+            const gameResult = document.querySelector(".middle")
+            gameResult.textContent = ("YOU LOSE!")
+            rockButton.classList.add("deactivate")
+            paperButton.classList.add("deactivate")
+            scissorsButton.classList.add("deactivate")
+            newgameButton.classList.add("bigger")
+        }
     }
 })
 
