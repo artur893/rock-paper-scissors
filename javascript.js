@@ -63,6 +63,36 @@ scissorsButton.addEventListener("click", () => {
     }
 })
 
+//animations
+newgameButton.addEventListener("mouseover", () => {
+    newgameButton.classList.add("picked")
+})
+newgameButton.addEventListener("mouseout", () => {
+    newgameButton.classList.remove("picked")
+})
+
+rockButton.addEventListener("mouseover", () => {
+    rockButton.classList.add("picked")
+})
+rockButton.addEventListener("mouseout", () => {
+    rockButton.classList.remove("picked")
+})
+
+paperButton.addEventListener("mouseover", () => {
+    paperButton.classList.add("picked")
+})
+paperButton.addEventListener("mouseout", () => {
+    paperButton.classList.remove("picked")
+})
+
+scissorsButton.addEventListener("mouseover", () => {
+    scissorsButton.classList.add("picked")
+})
+scissorsButton.addEventListener("mouseout", () => {
+    scissorsButton.classList.remove("picked")
+})
+
+
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3)
     switch (randomNumber) {
