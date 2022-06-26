@@ -17,6 +17,8 @@ newgameButton.addEventListener("click", () => {
     paperButton.classList.remove("deactivate")
     scissorsButton.classList.remove("deactivate")
     newgameButton.classList.remove("bigger")
+    const gameResult = document.querySelector(".middle")
+    gameResult.textContent = (". . .")
 })
 
 rockButton.addEventListener("click", () => {
